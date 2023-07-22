@@ -3,8 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+
+    h1 {
+        font: 900 30px Verdana, sans-serif;
+    }
+
+    .button-open-meme__plusIcon {
+        width: 18px;
+        text-align: left;
+        transition: 0.1s;
+    }
+
+    .button-open-meme__button {
+        display: flex; align-items: center; justify-content: space-between;
+        width: 100%;
+        text-align: left;
+        font: bold 20px/50px Verdana, sans-serif;
+        text-decoration: none;
+        border: none;
+        border-top: 1px solid rgb(200, 200, 200);
+    }
+
+    .button-open-meme__div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-open-meme__img {
+        margin-left: auto; margin-right: auto;
+    }
+
+    main {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .button-open-meme__button:focus + .button-open-meme__div .button-open-meme__img {
+        width: 30vw; height: auto;
+        border: 1px solid black;
+    }
+
+    .button-open-meme__button + .button-open-meme__div .button-open-meme__img {
+        width: 0vw; height: auto;
+        transition: 1s;
+        border-width: 0;
+    }
+
+    .button-open-meme__button:focus .button-open-meme__plusIcon {
+        rotate: 45deg;
+    }
+
+  </style>
 </head>
 <body>
- ...    
+    <main>
+        <h1>CSS Bayan</h1>
+        <div class="button-open-meme">
+            <button class="button-open-meme__button">You can't just copy and paste CSS
+                <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
+            </button>
+            <div class="button-open-meme__div">
+                <img class="button-open-meme__img" src="noIdea.jpg" alt="">
+            </div>
+        </div>
+    </main>
 </body>
 </html>

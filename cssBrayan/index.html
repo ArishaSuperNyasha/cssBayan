@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="adaptionLayout.css">
   <style>
 
-    h1 {
-        font: 900 30px Verdana, sans-serif;
+    h1, .button-open-meme__button {
+        font-weight: 900; font-family: Verdana, Tahoma, sans-serif;
+    }
+
+    main .button-open-meme__button{
+        color: rgb(0, 102, 255);
+    }
+
+    main .button-open-meme__plusIcon {
+        opacity: 1;
     }
 
     .button-open-meme__plusIcon {
-        width: 18px;
         text-align: left;
         transition: 0.1s;
     }
@@ -19,10 +28,9 @@
         display: flex; align-items: center; justify-content: space-between;
         width: 100%;
         text-align: left;
-        font: bold 20px/50px Verdana, sans-serif;
         text-decoration: none;
-        border: none;
-        border-top: 1px solid rgb(200, 200, 200);
+        border-left: none; border-right: none; border-bottom: none;
+        border-top-color: rgb(200, 200, 200); border-top-style: solid;
     }
 
     .button-open-meme__div {
@@ -39,19 +47,46 @@
         margin: 0 10%;
     }
 
-    .button-open-meme__button:focus + .button-open-meme__div .button-open-meme__img {
-        width: 30vw; height: auto;
-        border: 1px solid black;
+    .button-open-meme__button:focus {
+        color: black;
+    }
+
+    .button-open-meme__button:focus + .button-open-meme__div .button-open-meme__img{
+        height: auto;
+        border-style: solid; border-color: black;
     }
 
     .button-open-meme__button + .button-open-meme__div .button-open-meme__img {
         width: 0vw; height: auto;
-        transition: 1s;
+        transition: 0.3s;
         border-width: 0;
     }
 
-    .button-open-meme__button:focus .button-open-meme__plusIcon {
+    .button-open-meme__button:focus .button-open-meme__plusIcon{
         rotate: 45deg;
+    }
+
+    @media (hover: hover) {
+        main .button-open-meme__plusIcon {
+            opacity: 0;
+        }
+        
+        .button-open-meme__button:hover .button-open-meme__plusIcon {
+            rotate: 45deg;
+        }
+
+        .button-open-meme__button:hover + .button-open-meme__div .button-open-meme__img  {
+            height: auto;
+            border-style: solid; border-color: black;
+        }
+        
+        main:hover .button-open-meme__button{
+            color: black;
+        }
+        
+        main:hover .button-open-meme__plusIcon {
+            opacity: 1;
+        }
     }
 
   </style>
@@ -60,11 +95,43 @@
     <main>
         <h1>CSS Bayan</h1>
         <div class="button-open-meme">
-            <button class="button-open-meme__button">You can't just copy and paste CSS
+            <button class="button-open-meme__button">Javascript. I have no idea what I am doing
                 <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
             </button>
             <div class="button-open-meme__div">
-                <img class="button-open-meme__img" src="noIdea.jpg" alt="">
+                <img class="button-open-meme__img" src="noIdea.jpg">
+            </div>
+        </div>
+        <div class="button-open-meme">
+            <button class="button-open-meme__button">HTML. HTML + CSS
+                <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
+            </button>
+            <div class="button-open-meme__div">
+                <img class="button-open-meme__img" src="html+css.jpg">
+            </div>
+        </div>
+        <div class="button-open-meme">
+            <button class="button-open-meme__button">Про HTML верстальщиков
+                <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
+            </button>
+            <div class="button-open-meme__div">
+                <img class="button-open-meme__img" src="layers.jpg">
+            </div>
+        </div>
+        <div class="button-open-meme">
+            <button class="button-open-meme__button">CSS IS AWESOME
+                <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
+            </button>
+            <div class="button-open-meme__div">
+                <img class="button-open-meme__img" src="cssIsAwesome.jpg">
+            </div>
+        </div>
+        <div class="button-open-meme">
+            <button class="button-open-meme__button">Оптические иллюзии
+                <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
+            </button>
+            <div class="button-open-meme__div">
+                <img class="button-open-meme__img" src="notLanguage.jpg">
             </div>
         </div>
     </main>

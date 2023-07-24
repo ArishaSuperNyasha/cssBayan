@@ -55,6 +55,10 @@
         color: black;
     }
 
+    :focus-visible {
+        outline: none;
+    }
+
     .button-open-meme__button:focus + .button-open-meme__div .button-open-meme__img{
         height: auto;
         border-style: solid; border-color: black;
@@ -99,7 +103,7 @@
     <main>
         <h1>CSS Bayan</h1>
         <div class="button-open-meme">
-            <button class="button-open-meme__button">Javascript. I have no idea what I am doing
+            <button class="button-open-meme__button" autofocus>Javascript. I have no idea what I am doing
                 <img class="button-open-meme__plusIcon" src="plusIcon.svg" alt="">
             </button>
             <div class="button-open-meme__div">
